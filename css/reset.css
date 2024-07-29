@@ -1,0 +1,30 @@
+*{margin: 0; padding: 0;}
+*,*::before,*::after{background-repeat: no-repeat; box-sizing: border-box;}
+/* 모든요소, 모든요소의 before, 모든요소의 after
+    *선택자는 before, after를 잡지못한다
+
+    box-sizing: 너비X높이 계산 규칙을 지정
+    border-box : 너비X높이 ~ 패딩 ~ 보더까지 공간값 계산에 포함
+*/
+ul, ol{list-style: none;}
+a{text-decoration: none; color: inherit;}
+img{display: block;}
+/* 
+    이미지는 인라인요소임!
+    a태그 안에 이미지를 넣으면
+    인라인요소가 중첩되어 공백문자가 발생함(틈이 발생 ㅠㅠ)
+    => 블록요소가 되면 공백문자가 사라짐!
+*/
+button{cursor: pointer;}
+input, button, textarea, select, option{
+    display: block;
+    border: 0;
+    background-color: transparent;
+}
+
+#wrapper{
+    /* 레이아웃 전체를 브라우저 너비로부터 보호하는 요소 */
+    max-width: 1920px;/*최대너비*/
+    margin: 0 auto;
+    padding-bottom: 500px;
+}
